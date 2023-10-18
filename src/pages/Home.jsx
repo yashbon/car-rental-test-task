@@ -1,10 +1,10 @@
-import icon from '../icons/pngwing.com-3.png';
+import logo from '../icons/pngwing.com-3.png';
 
 const Home = () => {
     // console.log('Home Page');
     return (
         <>
-            <img src={icon} alt="" style={{ width: 100, margin: '50px 0' }} />
+            <img src={logo} alt="" style={{ width: 100, margin: '50px 0' }} />
             <h2>Welcome to the car rental app!</h2>
             <p style={{ padding: '50px' }}>
                 This application is a car rental station that allows you to rent

@@ -1,35 +1,35 @@
-import {
-    useDispatch,
-    // useSelector
-} from 'react-redux';
+// import // useDispatch,
+// useSelector
+// 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layuot/Leyout';
-import { lazy, useEffect } from 'react';
-import { PublicRoute } from './PublicRoute';
-import { PrivateRoute } from './PrivatRoute';
-import { useAuth } from './hooks/useAuth';
-import { refreshUser } from 'redux/auth/authOperations';
-import Favorites from 'pages/Favorites';
+import {
+    lazy,
+    // useEffect
+} from 'react';
+// import { PublicRoute } from './PublicRoute';
+// import { PrivateRoute } from './PrivatRoute';
+// import { useAuth } from './hooks/useAuth';
+// import { refreshUser } from 'redux/auth/authOperations';
 
 const Home = lazy(() => import('pages/Home'));
 const Catalog = lazy(() => import('pages/Catalog'));
+const Favorites = lazy(() => import('pages/Favorites'));
 
-const Contacts = lazy(() => import('pages/Contacts'));
-const Register = lazy(() => import('pages/Register'));
-const Login = lazy(() => import('pages/Login'));
+// const Contacts = lazy(() => import('pages/Contacts'));
+// const Register = lazy(() => import('pages/Register'));
+// const Login = lazy(() => import('pages/Login'));
 
 export const App = () => {
-    // const { isLoading, error } = useSelector(state => state.contacts);
-    const dispatch = useDispatch();
-    const { isRefreshing } = useAuth();
+    // const { isLoading, error } = useSelector(state => state.adverts);
+    // const dispatch = useDispatch();
+    // const { isRefreshing } = useAuth();
 
-    useEffect(() => {
-        dispatch(refreshUser());
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(refreshUser());
+    // }, [dispatch]);
 
-    return isRefreshing ? (
-        <b>Refreshing user...</b>
-    ) : (
+    return (
         <div
             style={{
                 // height: '100vh',
@@ -47,33 +47,6 @@ export const App = () => {
                     <Route index element={<Home />} />
                     <Route path="/catalog" element={<Catalog />} />
                     <Route path="/favorites" element={<Favorites />} />
-                    {/* <Route
-                        path="/register"
-                        element={
-                            <PublicRoute
-                                redirectTo="/contacts"
-                                component={<Register />}
-                            />
-                        }
-                    /> */}
-                    {/* <Route
-                        path="/login"
-                        element={
-                            <PublicRoute
-                                redirectTo="/contacts"
-                                component={<Login />}
-                            />
-                        }
-                    /> */}
-                    {/* <Route
-                        path="/contacts"
-                        element={
-                            <PrivateRoute
-                                redirectTo="/login"
-                                component={<Contacts />}
-                            />
-                        }
-                    /> */}
                 </Route>
             </Routes>
         </div>
