@@ -1,0 +1,24 @@
+.contactList {
+    margin-top: 20px;
+    padding-left: 20px;
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: CornflowerBlue;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contactListItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    max-width: 400px;
+    margin-bottom: 12px;
+}
+
+.contactListItem:last-child {
+    margin-bottom: 0;
+}
