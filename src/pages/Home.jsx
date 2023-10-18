@@ -1,7 +1,7 @@
 import icon from '../icons/pngwing.com-3.png';
 
 const Home = () => {
-    console.log('Home Page');
+    // console.log('Home Page');
     return (
         <>
             <img src={icon} alt="" style={{ width: 100, margin: '50px 0' }} />

@@ -9,8 +9,11 @@ import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivatRoute';
 import { useAuth } from './hooks/useAuth';
 import { refreshUser } from 'redux/auth/authOperations';
+import Favorites from 'pages/Favorites';
 
 const Home = lazy(() => import('pages/Home'));
+const Catalog = lazy(() => import('pages/Catalog'));
+
 const Contacts = lazy(() => import('pages/Contacts'));
 const Register = lazy(() => import('pages/Register'));
 const Login = lazy(() => import('pages/Login'));
@@ -42,7 +45,9 @@ export const App = () => {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route
+                    <Route path="/catalog" element={<Catalog />} />
+                    <Route path="/favorites" element={<Favorites />} />
+                    {/* <Route
                         path="/register"
                         element={
                             <PublicRoute
@@ -50,8 +55,8 @@ export const App = () => {
                                 component={<Register />}
                             />
                         }
-                    />
-                    <Route
+                    /> */}
+                    {/* <Route
                         path="/login"
                         element={
                             <PublicRoute
@@ -59,8 +64,8 @@ export const App = () => {
                                 component={<Login />}
                             />
                         }
-                    />
-                    <Route
+                    /> */}
+                    {/* <Route
                         path="/contacts"
                         element={
                             <PrivateRoute
@@ -68,7 +73,7 @@ export const App = () => {
                                 component={<Contacts />}
                             />
                         }
-                    />
+                    /> */}
                 </Route>
             </Routes>
         </div>

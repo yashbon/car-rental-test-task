@@ -1,10 +1,10 @@
-import { AuthMenu } from 'components/AuthMenu/AuthMenu';
+// import { AuthMenu } from 'components/AuthMenu/AuthMenu';
 import { Navigation } from 'components/Navigation/Navigation';
-import { UserMenu } from 'components/UserMenu/UserMenu';
-import { useAuth } from 'components/hooks/useAuth';
+// import { UserMenu } from 'components/UserMenu/UserMenu';
+// import { useAuth } from 'components/hooks/useAuth';
 
 const AppBar = () => {
-    const { isLoggedIn } = useAuth();
+    // const { isLoggedIn } = useAuth();
     // console.log(isLoggedIn);
     // console.log(useAuth());
     return (
@@ -20,7 +20,7 @@ const AppBar = () => {
             }}
         >
             <Navigation />
-            {isLoggedIn ? <UserMenu /> : <AuthMenu />}
+            {/* {isLoggedIn ? <UserMenu /> : <AuthMenu />} */}
         </header>
     );
 };
