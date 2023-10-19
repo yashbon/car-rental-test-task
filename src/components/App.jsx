@@ -42,13 +42,14 @@ export const App = () => {
                 // backgroundColor: 'lightsteelblue',
             }}
         >
-            <Routes>
+            <h1>hello</h1>
+            {/* <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="/catalog" element={<Catalog />} />
                     <Route path="/favorites" element={<Favorites />} />
                 </Route>
-            </Routes>
+            </Routes> */}
         </div>
     );
 };
