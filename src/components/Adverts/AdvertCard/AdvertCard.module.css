@@ -2,5 +2,8 @@
     outline: 1px solid red;
     width: 274px;
     height: 426px;
-    list-style-type: none;
+}
+
+.ImageCard {
+    border-radius: 14px;
 }

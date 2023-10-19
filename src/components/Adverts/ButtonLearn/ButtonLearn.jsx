@@ -1,7 +1,11 @@
 import css from './ButtonLearn.module.css';
 
-const ButtonLearn = ({ onClick }) => {
-    return <button className={css.buttonLearn}>Learn more</button>;
+const ButtonLearn = ({ onClick, advert }) => {
+    return (
+        <button className={css.buttonLearn} onClick={onClick}>
+            Learn more
+        </button>
+    );
 };
 
 export default ButtonLearn;
