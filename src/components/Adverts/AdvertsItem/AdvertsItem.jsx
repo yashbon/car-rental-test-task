@@ -2,16 +2,16 @@ import ButtonLearn from '../ButtonLearn/ButtonLearn';
 import css from './AdvertsItem.module.css';
 const AdvertsItem = ({ advert }) => {
     const {
-        id,
-        year,
+        // id,
+        // year,
         make,
-        model,
+        // model,
         img,
         rentalPrice,
         address,
         rentalCompany,
-        accessories,
-        functionalities,
+        // accessories,
+        // functionalities,
     } = advert;
     return (
         <li className={css.advertsItem}>

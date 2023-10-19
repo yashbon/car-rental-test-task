@@ -1,20 +1,22 @@
 // import // useDispatch,
 // useSelector
 // 'react-redux';
-import { Route, Routes } from 'react-router-dom';
-import Layout from './Layuot/Leyout';
-import {
-    lazy,
-    // useEffect
-} from 'react';
+
+// import { Route, Routes } from 'react-router-dom';
+// import Layout from './Layuot/Leyout';
+// import {
+//     lazy,
+//     // useEffect
+// } from 'react';
+
 // import { PublicRoute } from './PublicRoute';
 // import { PrivateRoute } from './PrivatRoute';
 // import { useAuth } from './hooks/useAuth';
 // import { refreshUser } from 'redux/auth/authOperations';
 
-const Home = lazy(() => import('pages/Home'));
-const Catalog = lazy(() => import('pages/Catalog'));
-const Favorites = lazy(() => import('pages/Favorites'));
+// const Home = lazy(() => import('pages/Home'));
+// const Catalog = lazy(() => import('pages/Catalog'));
+// const Favorites = lazy(() => import('pages/Favorites'));
 
 // const Contacts = lazy(() => import('pages/Contacts'));
 // const Register = lazy(() => import('pages/Register'));
