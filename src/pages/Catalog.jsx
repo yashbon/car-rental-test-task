@@ -1,4 +1,4 @@
-import AdvertsList from 'components/AdvertsList/AdvertsList';
+import AdvertsList from 'components/Adverts/AdvertsList/AdvertsList';
 
 const Catalog = () => {
     return (
