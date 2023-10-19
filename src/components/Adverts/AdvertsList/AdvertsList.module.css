@@ -1,0 +1,8 @@
+.advertsList {
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
