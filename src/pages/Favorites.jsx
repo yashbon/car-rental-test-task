@@ -1,7 +1,7 @@
-import AdvertsList from 'components/Adverts/AdvertsList/AdvertsList';
+// import AdvertsList from 'components/Adverts/AdvertsList/AdvertsList';
 import FavoritesList from 'components/Favorites/FavoritesList';
-import { useSelector } from 'react-redux';
-import { selectFavorites } from 'redux/adverts/advertsSelectors';
+// import { useSelector } from 'react-redux';
+// import { selectFavorites } from 'redux/adverts/advertsSelectors';
 
 const Favorites = () => {
     // const favoriteAdverts = useSelector(selectFavorites);
