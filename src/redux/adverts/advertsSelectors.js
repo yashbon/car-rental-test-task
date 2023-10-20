@@ -1,1 +1,1 @@
-export const chooseAdverts = state => state.adverts.list;
+export const selectAdverts = state => state.adverts.list;
