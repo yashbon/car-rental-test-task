@@ -1,7 +1,11 @@
 import css from './ButtonFavorite.module.css';
 
-const ButtonFavorite = () => {
-    return <button className={css.buttonFavorite}>like</button>;
+const ButtonFavorite = ({ onClick }) => {
+    return (
+        <button className={css.buttonFavorite} onClick={onClick}>
+            like
+        </button>
+    );
 };
 
 export default ButtonFavorite;

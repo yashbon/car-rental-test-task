@@ -1,9 +1,11 @@
-// import { useState } from 'react';
 // import Modal from 'components/Modal/Modal';
+import { selectFavorites } from 'redux/adverts/advertsSelectors';
 import ButtonFavorite from '../ButtonFavorite/ButtonFavorite';
 import ButtonLearn from '../ButtonLearn/ButtonLearn';
 import css from './AdvertCard.module.css';
-// import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavorite, delFavorite } from 'redux/adverts/favoritesSlice';
 
 const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
     const {
@@ -18,6 +20,37 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
         // accessories,
         // functionalities,
     } = advert;
+
+    const [isFavorite, setIsFavorite] = useState(false);
+    const { favoriteAdverts } = useSelector(selectFavorites);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (
+            favoriteAdverts &&
+            favoriteAdverts.some(
+                favoriteAdvert => favoriteAdvert.id === advert.id
+            )
+        ) {
+            setIsFavorite(true);
+        }
+    }, [favoriteAdverts, advert]);
+
+    const handleFavorite = event => {
+        console.log('click like');
+        // event.stopPropafation();
+        setIsFavorite(!isFavorite);
+        if (
+            favoriteAdverts &&
+            favoriteAdverts.some(
+                favoriteAdvert => favoriteAdvert.id === advert.id
+            )
+        ) {
+            dispatch(delFavorite(advert));
+        } else {
+            dispatch(addFavorite(advert));
+        }
+    };
 
     // const [showModal, setShowModal] = useState(false);
 
@@ -43,7 +76,7 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
                         overflow: 'hidden',
                     }}
                 >
-                    <ButtonFavorite />
+                    <ButtonFavorite onClick={handleFavorite} />
                     <img
                         src={img}
                         alt={make}
