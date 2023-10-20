@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdverts } from 'redux/adverts/advertsOperations';
-import { chooseAdverts } from 'redux/adverts/advertsSelectors';
+import { selectAdverts } from 'redux/adverts/advertsSelectors';
 import AdvertCard from '../AdvertCard/AdvertCard';
 import css from './AdvertsList.module.css';
 import Modal from 'components/Modal/Modal';
@@ -9,14 +9,14 @@ import { useEffect, useState } from 'react';
 
 const AdvertsList = () => {
     // const adverts = useSelector(state => state.adverts.list);
-    const adverts = useSelector(chooseAdverts);
+    const adverts = useSelector(selectAdverts);
     // const filter = useSelector(state => state.filter.filter);
 
     // const filteredAdverts = adverts.filter(contact =>
     //     contact.name.toLowerCase().includes(filter.toLowerCase())
     // );
     const [showModal, setShowModal] = useState(false);
-    const [dataAdvert, setDataAdvert] = useState({});
+    const [dataAdvert, setDataAdvert] = useState('');
 
     const dispatch = useDispatch();
 
