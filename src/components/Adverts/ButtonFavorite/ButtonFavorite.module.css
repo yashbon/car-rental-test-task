@@ -1,4 +1,9 @@
 .buttonFavorite {
     /* width: 18px; */
     height: 18px;
+
+}
+
+.buttonFavorite:hover {
+    cursor: pointer;
 }

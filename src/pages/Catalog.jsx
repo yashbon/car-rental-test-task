@@ -1,14 +1,25 @@
 import AdvertsList from 'components/Adverts/AdvertsList/AdvertsList';
-import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdverts } from 'redux/adverts/advertsOperations';
+import { selectAdverts } from 'redux/adverts/advertsSelectors';
 
 const Catalog = () => {
     const dispatch = useDispatch();
-    dispatch(fetchAdverts());
+    const { adverts } = useSelector(selectAdverts);
+
+    // useEffect(() => {
+    //     dispatch(fetchAdverts());
+    // });
+    useEffect(() => {
+        dispatch(fetchAdverts());
+    }, [dispatch]);
+
+    // console.log(adverts);
     return (
         <>
             <h2>catalog</h2>
-            <AdvertsList />
+            <AdvertsList adverts={adverts} />
         </>
     );
 };
