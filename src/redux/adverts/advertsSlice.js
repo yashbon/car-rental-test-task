@@ -1,6 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchAdverts } from './advertsOperations';
 
+const initialState = {
+    adverts: [],
+    isLoading: false,
+    error: null,
+};
+
 const handlePending = state => {
     state.isLoading = true;
 };
@@ -13,32 +19,27 @@ const handleRejected = (state, action) => {
 const handleGetAdvertsFulfilled = (state, action) => {
     state.isLoading = false;
     state.error = null;
-    state.list = action.payload;
+    state.adverts = action.payload;
 };
 
 // const handleAddContactFulfilled = (state, action) => {
 //     state.isLoading = false;
 //     state.error = null;
-//     state.list.push(action.payload);
+//     state.adverts.push(action.payload);
 // };
 
 // const handleDeleteContactFulfilled = (state, action) => {
 //     state.isLoading = false;
 //     state.error = null;
-//     const index = state.list.findIndex(
+//     const index = state.adverts.findIndex(
 //         contact => contact.id === action.payload.id
 //     );
-//     state.list.splice(index, 1);
+//     state.adverts.splice(index, 1);
 // };
 
 const advertsSlice = createSlice({
     name: 'adverts',
-    initialState: {
-        list: [],
-        isLoading: false,
-        error: null,
-    },
-
+    initialState,
     extraReducers: builder => {
         builder
             .addCase(fetchAdverts.pending, handlePending)
