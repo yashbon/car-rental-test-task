@@ -24,9 +24,7 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
     const [isFavorite, setIsFavorite] = useState(false);
     const { favorites } = useSelector(selectFavorites);
     const dispatch = useDispatch();
-    // if (!favoriteAdverts) {
-    //     favoriteAdverts = [];
-    // }
+
     useEffect(() => {
         if (favorites.some(favoriteAdvert => favoriteAdvert.id === advert.id)) {
             setIsFavorite(true);

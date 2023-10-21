@@ -8,24 +8,32 @@ import { selectAdverts } from 'redux/adverts/advertsSelectors';
 const Catalog = () => {
     const dispatch = useDispatch();
     const { adverts } = useSelector(selectAdverts);
-
+    // const[flag, setFlag]=useState(false)
     const [page, setPage] = useState(1);
+    // console.log('render page', page);
+    useEffect(() => {
+        dispatch(fetchAdverts());
+    }, [dispatch]);
+    // fetchAdverts();
 
     // useEffect(() => {
+    //     // if (page === 1) {
+    //     //     dispatch(fetchAdverts());
+    //     // }
     //     dispatch(fetchAdverts());
-    // });
-    useEffect(() => {
-        if (page === 1) {
-            dispatch(fetchAdverts());
-        }
-    }, [dispatch, page]);
+    //     // dispatch(fetchAdverts());
+    //     // fetchAdverts(page);
+    // }, [dispatch, page]);
 
-    // console.log(adverts);
     return (
         <>
             <h2>catalog</h2>
             <AdvertsList adverts={adverts} />
-            <ButtonLoadMore page={page} setPage={setPage} />
+            <ButtonLoadMore
+                page={page}
+                setPage={setPage}
+                // flag={flag}
+            />
         </>
     );
 };
