@@ -19,7 +19,8 @@ const handleRejected = (state, action) => {
 const handleGetAdvertsFulfilled = (state, action) => {
     state.isLoading = false;
     state.error = null;
-    state.adverts = action.payload;
+    // state.adverts = action.payload;
+    state.adverts = [...state.adverts, ...action.payload];
 };
 
 // const handleAddContactFulfilled = (state, action) => {
