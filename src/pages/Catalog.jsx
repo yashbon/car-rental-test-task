@@ -1,4 +1,5 @@
 import AdvertsList from 'components/Adverts/AdvertsList/AdvertsList';
+import ButtonLoadMore from 'components/Adverts/ButtonLoadMore/ButtonLoadMore';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdverts } from 'redux/adverts/advertsOperations';
@@ -20,6 +21,7 @@ const Catalog = () => {
         <>
             <h2>catalog</h2>
             <AdvertsList adverts={adverts} />
+            <ButtonLoadMore />
         </>
     );
 };
