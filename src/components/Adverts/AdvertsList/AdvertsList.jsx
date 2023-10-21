@@ -8,7 +8,6 @@ import Modal from 'components/Modal/Modal';
 import { useEffect, useState } from 'react';
 
 const AdvertsList = () => {
-    // const adverts = useSelector(state => state.adverts.list);
     const adverts = useSelector(selectAdverts);
     // const filter = useSelector(state => state.filter.filter);
 
@@ -16,7 +15,7 @@ const AdvertsList = () => {
     //     contact.name.toLowerCase().includes(filter.toLowerCase())
     // );
     const [showModal, setShowModal] = useState(false);
-    const [dataAdvert, setDataAdvert] = useState({});
+    const [dataAdvert, setDataAdvert] = useState();
 
     const dispatch = useDispatch();
 

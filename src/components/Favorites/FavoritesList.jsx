@@ -12,7 +12,7 @@ const FavoritesList = () => {
     console.log('hello from FavoritesList', favorites);
 
     const [showModal, setShowModal] = useState(false);
-    const [dataAdvert, setDataAdvert] = useState({});
+    const [dataAdvert, setDataAdvert] = useState();
 
     const dispatch = useDispatch();
 
@@ -37,7 +37,7 @@ const FavoritesList = () => {
                         // className={css.ListItem}
                     >
                         <AdvertCard
-                            key={favorites.id}
+                            // key={favorites.id}
                             // dataAdvert={advert}
                             advert={advert}
                             togleModal={togleModal}

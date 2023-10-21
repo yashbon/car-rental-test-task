@@ -24,7 +24,7 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
     const [isFavorite, setIsFavorite] = useState(false);
     const { favoriteAdverts } = useSelector(selectFavorites);
     const dispatch = useDispatch();
-
+    console.log(favoriteAdverts);
     useEffect(() => {
         if (
             favoriteAdverts &&
@@ -37,9 +37,10 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
     }, [favoriteAdverts, advert]);
 
     const handleFavorite = event => {
-        console.log('click like');
-        // event.stopPropafation();
+        console.log('click like', isFavorite);
+        // event.stopPropagation();
         setIsFavorite(!isFavorite);
+
         if (
             favoriteAdverts &&
             favoriteAdverts.some(
