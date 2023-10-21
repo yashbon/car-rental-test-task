@@ -22,50 +22,27 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
     } = advert;
 
     const [isFavorite, setIsFavorite] = useState(false);
-    const { favoriteAdverts } = useSelector(selectFavorites);
+    const { favorites } = useSelector(selectFavorites);
     const dispatch = useDispatch();
-    console.log(favoriteAdverts);
+    // if (!favoriteAdverts) {
+    //     favoriteAdverts = [];
+    // }
     useEffect(() => {
-        if (
-            favoriteAdverts &&
-            favoriteAdverts.some(
-                favoriteAdvert => favoriteAdvert.id === advert.id
-            )
-        ) {
+        if (favorites.some(favoriteAdvert => favoriteAdvert.id === advert.id)) {
             setIsFavorite(true);
         }
-    }, [favoriteAdverts, advert]);
+    }, [favorites, advert]);
 
     const handleFavorite = event => {
-        console.log('click like', isFavorite);
-        // event.stopPropagation();
+        event.stopPropagation();
         setIsFavorite(!isFavorite);
 
-        if (
-            favoriteAdverts &&
-            favoriteAdverts.some(
-                favoriteAdvert => favoriteAdvert.id === advert.id
-            )
-        ) {
+        if (favorites.some(favoriteAdvert => favoriteAdvert.id === advert.id)) {
             dispatch(delFavorite(advert));
         } else {
             dispatch(addFavorite(advert));
         }
     };
-
-    // const [showModal, setShowModal] = useState(false);
-
-    // function togleModal(largeImageURL) {
-    //     // console.log('click togleModal', showModal);
-    //     // console.log('click togleModal', adverts);
-
-    //     // this.setState(state => ({
-    //     // showModal: !this.state.showModal,
-    //     setShowModal(!showModal);
-    //     // // largeImageURL: largeImageURL,
-    //     // setLargeImageURL(largeImageURL);
-    //     // // }));
-    // }
 
     return (
         <div className={css.advertsItem}>
@@ -125,3 +102,17 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
 };
 
 export default AdvertCard;
+
+// const [showModal, setShowModal] = useState(false);
+
+// function togleModal(largeImageURL) {
+//     // console.log('click togleModal', showModal);
+//     // console.log('click togleModal', adverts);
+
+//     // this.setState(state => ({
+//     // showModal: !this.state.showModal,
+//     setShowModal(!showModal);
+//     // // largeImageURL: largeImageURL,
+//     // setLargeImageURL(largeImageURL);
+//     // // }));
+// }

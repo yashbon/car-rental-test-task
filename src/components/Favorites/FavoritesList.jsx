@@ -1,14 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux';
+import {
+    useDispatch,
+    // useSelector
+} from 'react-redux';
 import { fetchAdverts } from 'redux/adverts/advertsOperations';
-import { selectFavorites } from 'redux/adverts/advertsSelectors';
+// import { selectFavorites } from 'redux/adverts/advertsSelectors';
 import AdvertCard from 'components/Adverts/AdvertCard/AdvertCard';
 // import css from './AdvertsList.module.css';
 import Modal from 'components/Modal/Modal';
 
 import { useEffect, useState } from 'react';
-const FavoritesList = () => {
+const FavoritesList = ({ favorites }) => {
     // const adverts = useSelector(state => state.adverts.list);
-    const favorites = useSelector(selectFavorites);
+    // const favorites = useSelector(selectFavorites);
     console.log('hello from FavoritesList', favorites);
 
     const [showModal, setShowModal] = useState(false);

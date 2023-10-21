@@ -1,11 +1,9 @@
 const { createSlice } = require('@reduxjs/toolkit');
 
 const favoriteAdvertsSlice = createSlice({
-    name: 'favorite',
+    name: 'favorites',
     initialState: {
         favorites: [],
-        // isLoading: false,
-        // error: null,
     },
     reducers: {
         addFavorite: (state, { payload }) => {
