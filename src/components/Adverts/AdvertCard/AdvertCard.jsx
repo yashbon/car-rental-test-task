@@ -5,7 +5,7 @@ import ButtonLearn from '../ButtonLearn/ButtonLearn';
 import css from './AdvertCard.module.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite, delFavorite } from 'redux/adverts/favoritesSlice';
+import { addFavorite, delFavorite } from 'redux/favorites/favoritesSlice';
 
 const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
     const {

@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { advertsReducer } from './adverts/advertsSlice';
-import { favoriteReducer } from './adverts/favoritesSlice';
+import { favoriteReducer } from './favorites/favoritesSlice';
 // import { filterReducer } from './contacts/filterSlice';
 
 // import storage from 'redux-persist/lib/storage';
