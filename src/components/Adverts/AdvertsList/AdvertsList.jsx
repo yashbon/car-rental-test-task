@@ -1,7 +1,7 @@
 // import { useDispatch, useSelector } from 'react-redux';
 // import { fetchAdverts } from 'redux/adverts/advertsOperations';
 // import { selectAdverts } from 'redux/adverts/advertsSelectors';
-import ModalContent from 'components/ModalContent/ModalContent';
+// import ModalContent from 'components/ModalContent/ModalContent';
 import AdvertCard from '../AdvertCard/AdvertCard';
 import css from './AdvertsList.module.css';
 import Modal from 'components/Modal/Modal';
