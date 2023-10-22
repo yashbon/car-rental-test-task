@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { fetchAdverts } from 'redux/adverts/advertsOperations';
+import css from './ButtonLoadMore.module.css';
 
 const ButtonLoadMore = ({ page, setPage }) => {
     // console.log('click load more');
@@ -13,7 +14,9 @@ const ButtonLoadMore = ({ page, setPage }) => {
     };
     return (
         <>
-            <button onClick={handleLoadMore}>LoadMore</button>
+            <button className={css.Button} onClick={handleLoadMore}>
+                LoadMore
+            </button>
         </>
     );
 };

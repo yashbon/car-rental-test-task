@@ -22,6 +22,10 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
         address,
     } = advert;
 
+    const companyAddress = address.split(',');
+    const country = companyAddress[2];
+    const city = companyAddress[1];
+
     const [isFavorite, setIsFavorite] = useState(false);
     const { favorites } = useSelector(selectFavorites);
     const dispatch = useDispatch();
@@ -64,13 +68,23 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
                         }}
                     />
                 </div>
-                <title>
-                    <span>{make}</span>
-                    <span>{rentalPrice}</span>
-                </title>
-                <p>
-                    <span>{address}</span>
-                    <span>{rentalCompany}</span>
+                <div className={css.titleWrapper}>
+                    <p>
+                        {make} <span className={css.textAccent}>{model}</span>,{' '}
+                        {year}
+                    </p>
+                    <p>{rentalPrice}</p>
+                </div>
+                <p className={css.info}>
+                    {city} <span className={css.textSeparator}> | </span>
+                    {country} <span className={css.textSeparator}> | </span>{' '}
+                    {rentalCompany}
+                </p>
+                <p className={css.info}>
+                    {type} <span className={css.textSeparator}> | </span>{' '}
+                    {model} <span className={css.textSeparator}> | </span> {id}
+                    <span className={css.textSeparator}> | </span>{' '}
+                    {functionalities[0]}
                 </p>
             </div>
 
