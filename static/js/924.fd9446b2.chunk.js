@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcar_rental_test_task=self.webpackChunkcar_rental_test_task||[]).push([[924],{7395:function(t,e,r){r.r(e);var s=r(620),a=r(9434),n=r(5247),c=r(184);e.default=function(){var t=(0,a.v9)(n.T).favorites;return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)("h2",{children:"favorites"}),(0,c.jsx)(s.Z,{adverts:t})]})}}}]);
+//# sourceMappingURL=924.fd9446b2.chunk.js.map
