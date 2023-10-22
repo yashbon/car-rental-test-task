@@ -1,6 +1,4 @@
-/*
- * Стили компонента Modal
- */
+@import '../../styles/variables.css';
 
 .Overlay {
     position: fixed;
@@ -19,6 +17,7 @@
     width: 541px;
     height: 752px;
     padding: 40px;
+    position: relative;
     border-radius: 24px;
     background-color: #fff;
     /* color: white; */
@@ -26,12 +25,6 @@
     /* max-height: calc(100vh - 24px); */
 }
 
-.Image {
-    width: 100%;
-    border-radius: 14px;
-}
-
-@import '../../styles/variables.css';
 
 .advertWrap {
     width: 100%;
@@ -40,7 +33,7 @@
 
 .imageWrap {
     border-radius: 14px;
-    width: 461px;
+    /* width: 461px; */
     height: 248px;
     max-width: 100%;
     overflow: hidden;

@@ -1,0 +1,28 @@
+@import '../../styles/variables.css';
+
+.buttonClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    padding: 0;
+    cursor: pointer;
+
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttonClose:focus,
+.buttonClose:hover {
+    color: var(--accent-hover);
+}
+
+.buttonCloseIcon {
+    width: 24px;
+    height: 24px;
+
+    fill: currentColor;
+}

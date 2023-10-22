@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom';
 import css from './Modal.module.css';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { ButtonClose } from 'components/ButtonClose/ButtonClose';
 
 const StyledLink = styled(NavLink)`
     color: #ffffff;
@@ -77,7 +78,8 @@ const Modal = ({ closeModal, dataAdvert }) => {
     return createPortal(
         <div className={css.Overlay} onClick={handleBackdropClick}>
             <div className={css.Modal}>
-                <button onClick={closeModal}>close</button>
+                {/* <button onClick={closeModal}>close</button> */}
+                <ButtonClose onClick={closeModal} />
 
                 <div className={css.advertWrap}>
                     <div className={css.imageWrap}>
