@@ -1,6 +1,7 @@
 // import { useDispatch, useSelector } from 'react-redux';
 // import { fetchAdverts } from 'redux/adverts/advertsOperations';
 // import { selectAdverts } from 'redux/adverts/advertsSelectors';
+import ModalContent from 'components/ModalContent/ModalContent';
 import AdvertCard from '../AdvertCard/AdvertCard';
 import css from './AdvertsList.module.css';
 import Modal from 'components/Modal/Modal';
@@ -37,8 +38,6 @@ const AdvertsList = ({ adverts }) => {
                 {adverts.map(advert => (
                     <li key={advert.id} className={css.ListItem}>
                         <AdvertCard
-                            // key={advert.id}
-                            // dataAdvert={advert}
                             advert={advert}
                             togleModal={togleModal}
                             showModal={showModal}
@@ -50,7 +49,14 @@ const AdvertsList = ({ adverts }) => {
                 <>
                     <h2>{dataAdvert.make}</h2>
                     {/* <Modal dataAdvert={dataAdvert} /> */}
-                    <Modal closeModal={togleModal} dataAdvert={dataAdvert} />
+                    <Modal closeModal={togleModal} dataAdvert={dataAdvert}>
+                        <ModalContent
+                            // onCloseModal={onCloseModal}
+                            // currentId={id}
+                            // currentAdvert={advert}
+                            dataAdvert={dataAdvert}
+                        />
+                    </Modal>
                 </>
             )}
         </>
