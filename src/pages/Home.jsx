@@ -1,4 +1,4 @@
-import logo from '../icons/pngwing.com-3.png';
+import logo from '../assets/icons/pngwing.com-3.png';
 
 const Home = () => {
     // console.log('Home Page');
