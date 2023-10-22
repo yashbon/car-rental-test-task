@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { advertsReducer } from './adverts/advertsSlice';
 import { favoriteReducer } from './adverts/favoritesSlice';
+import { searchReducer } from './search/searchSlice';
 // import { filterReducer } from './contacts/filterSlice';
 
 // import storage from 'redux-persist/lib/storage';
@@ -27,6 +28,7 @@ export const store = configureStore({
     reducer: {
         adverts: advertsReducer,
         favorites: favoriteReducer,
+        search: searchReducer,
         // filter: filterReducer,
         // auth: persistReducer(authPersistConfig, authReducer),
     },
