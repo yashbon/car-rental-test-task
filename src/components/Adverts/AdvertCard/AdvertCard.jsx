@@ -1,5 +1,3 @@
-// import Modal from 'components/Modal/Modal';
-// import { selectFavorites } from 'redux/adverts/advertsSelectors';
 import { selectFavorites } from 'redux/favorites/favoriteSelectors';
 import ButtonFavorite from '../ButtonFavorite/ButtonFavorite';
 import ButtonLearn from '../ButtonLearn/ButtonLearn';
@@ -88,41 +86,9 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
                 </p>
             </div>
 
-            <ButtonLearn
-                onClick={() => togleModal({ advert })}
-                // onClick={() => onClick(largeImageURL)}
-                // onClick={() => closeModal(make)}
-                // dataAdvert={advert}
-            />
-
-            {/* {showModal && (
-                <>
-                    <h1>hello</h1>
-                    <Modal closeModal={closeModal} advert={advert} />
-                </>
-            )} */}
-
-            {/* <p style={{ margin: 0 }}>
-                <span>{contact.name}</span> <br />
-                <span>{contact.number}</span>
-            </p>
-            <ContactButtonDel contactId={contact.id} /> */}
+            <ButtonLearn onClick={() => togleModal({ advert })} />
         </div>
     );
 };
 
 export default AdvertCard;
-
-// const [showModal, setShowModal] = useState(false);
-
-// function togleModal(largeImageURL) {
-//     // console.log('click togleModal', showModal);
-//     // console.log('click togleModal', adverts);
-
-//     // this.setState(state => ({
-//     // showModal: !this.state.showModal,
-//     setShowModal(!showModal);
-//     // // largeImageURL: largeImageURL,
-//     // setLargeImageURL(largeImageURL);
-//     // // }));
-// }

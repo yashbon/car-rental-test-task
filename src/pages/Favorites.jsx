@@ -6,7 +6,6 @@ const Favorites = () => {
     const { favorites } = useSelector(selectFavorites);
     return (
         <>
-            <h2>favorites</h2>
             <AdvertsList adverts={favorites} />
         </>
     );

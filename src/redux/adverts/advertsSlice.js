@@ -19,7 +19,6 @@ const handleRejected = (state, action) => {
 const handleGetAdvertsFulfilled = (state, action) => {
     state.isLoading = false;
     state.error = null;
-    console.log(state.adverts.length);
     state.adverts = [...state.adverts, ...action.payload];
 };
 
@@ -40,12 +39,6 @@ const advertsSlice = createSlice({
             .addCase(fetchAdvertsFirstPage.pending, handlePending)
             .addCase(fetchAdvertsFirstPage.fulfilled, handleGetAdvertsFirstPage)
             .addCase(fetchAdvertsFirstPage.rejected, handleRejected);
-        // .addCase(addContact.pending, handlePending)
-        // .addCase(addContact.fulfilled, handleAddContactFulfilled)
-        // .addCase(addContact.rejected, handleRejected)
-        // .addCase(deleteContact.pending, handlePending)
-        // .addCase(deleteContact.fulfilled, handleDeleteContactFulfilled)
-        // .addCase(deleteContact.rejected, handleRejected);
     },
 });
 

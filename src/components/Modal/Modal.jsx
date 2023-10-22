@@ -1,7 +1,4 @@
-import {
-    useEffect,
-    // useState
-} from 'react';
+import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import css from './Modal.module.css';
 import styled from 'styled-components';
@@ -30,7 +27,6 @@ const StyledLink = styled(NavLink)`
 const modalRoot = document.querySelector('#modal-root');
 
 const Modal = ({ closeModal, dataAdvert }) => {
-    // console.log(dataAdvert.advert);
     const {
         id,
         year,
@@ -63,7 +59,6 @@ const Modal = ({ closeModal, dataAdvert }) => {
 
     function handleBackdropClick(event) {
         if (event.target === event.currentTarget) {
-            // this.props.closeModal();
             closeModal();
         }
     }
@@ -78,7 +73,6 @@ const Modal = ({ closeModal, dataAdvert }) => {
     return createPortal(
         <div className={css.Overlay} onClick={handleBackdropClick}>
             <div className={css.Modal}>
-                {/* <button onClick={closeModal}>close</button> */}
                 <ButtonClose onClick={closeModal} />
 
                 <div className={css.advertWrap}>
@@ -161,8 +155,6 @@ const Modal = ({ closeModal, dataAdvert }) => {
 
                     <StyledLink to="tel:+380730000000">Rental car</StyledLink>
                 </div>
-                {/* <img src={img} alt={make} className={css.Image} />
-                <h2>{make}</h2> */}
             </div>
         </div>,
         modalRoot
