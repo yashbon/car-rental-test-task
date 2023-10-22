@@ -50,12 +50,12 @@ const AdvertsList = ({ adverts }) => {
                     <h2>{dataAdvert.make}</h2>
                     {/* <Modal dataAdvert={dataAdvert} /> */}
                     <Modal closeModal={togleModal} dataAdvert={dataAdvert}>
-                        <ModalContent
+                        {/* <ModalContent
                             // onCloseModal={onCloseModal}
                             // currentId={id}
                             // currentAdvert={advert}
                             dataAdvert={dataAdvert}
-                        />
+                        /> */}
                     </Modal>
                 </>
             )}
