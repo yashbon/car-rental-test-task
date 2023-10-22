@@ -3,7 +3,7 @@ import ButtonLoadMore from 'components/Adverts/ButtonLoadMore/ButtonLoadMore';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    fetchAdverts,
+    // fetchAdverts,
     fetchAdvertsFirstPage,
 } from 'redux/adverts/advertsOperations';
 import { selectAdverts } from 'redux/adverts/advertsSelectors';
