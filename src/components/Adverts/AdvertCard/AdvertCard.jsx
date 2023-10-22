@@ -1,5 +1,6 @@
 // import Modal from 'components/Modal/Modal';
-import { selectFavorites } from 'redux/adverts/advertsSelectors';
+// import { selectFavorites } from 'redux/adverts/advertsSelectors';
+import { selectFavorites } from 'redux/favorites/favoriteSelectors';
 import ButtonFavorite from '../ButtonFavorite/ButtonFavorite';
 import ButtonLearn from '../ButtonLearn/ButtonLearn';
 import css from './AdvertCard.module.css';
