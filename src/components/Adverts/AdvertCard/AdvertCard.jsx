@@ -10,16 +10,16 @@ import { addFavorite, delFavorite } from 'redux/favorites/favoritesSlice';
 
 const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
     const {
-        // id,
-        // year,
+        id,
+        year,
         make,
-        // model,
+        model,
+        type,
         img,
+        functionalities,
         rentalPrice,
-        address,
         rentalCompany,
-        // accessories,
-        // functionalities,
+        address,
     } = advert;
 
     const [isFavorite, setIsFavorite] = useState(false);
@@ -46,14 +46,11 @@ const AdvertCard = ({ togleModal, advert, closeModal, showModal }) => {
     return (
         <div className={css.advertsItem}>
             <div>
-                <div
-                    style={{
-                        width: '274px',
-                        height: '268px',
-                        overflow: 'hidden',
-                    }}
-                >
-                    <ButtonFavorite onClick={handleFavorite} />
+                <div className={css.imageWrap}>
+                    <ButtonFavorite
+                        isFavorite={isFavorite}
+                        onClick={handleFavorite}
+                    />
                     <img
                         src={img}
                         alt={make}
